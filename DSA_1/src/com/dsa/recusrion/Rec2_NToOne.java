@@ -1,6 +1,6 @@
 package com.dsa.recusrion;
 
-public class NToOne {
+public class Rec2_NToOne {
 	public static void main(String args []) {
 		printNToOne(10);
 	}
