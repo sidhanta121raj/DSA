@@ -1,4 +1,4 @@
-package com.dsa.recusrion;
+package com.dsa.sl5_Recusrion;
 
 public class Rec12_BinarySearch {
 

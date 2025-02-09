@@ -1,4 +1,4 @@
-package com.dsa.recusrion;
+package com.dsa.sl5_Recusrion;
 
 public class Rec6_SumOfDigits {
 	public static void main(String[] args) {

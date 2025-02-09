@@ -1,4 +1,4 @@
-package com.dsa.recusrion;
+package com.dsa.sl5_Recusrion;
 
 public class Rec5_Factorial {
 	public static void main(String[] args) {

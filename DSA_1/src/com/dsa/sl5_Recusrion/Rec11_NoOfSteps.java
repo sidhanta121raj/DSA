@@ -1,4 +1,4 @@
-package com.dsa.recusrion;
+package com.dsa.sl5_Recusrion;
 
 //https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero
 public class Rec11_NoOfSteps {
