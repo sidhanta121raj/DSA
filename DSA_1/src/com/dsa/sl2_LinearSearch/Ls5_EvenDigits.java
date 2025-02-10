@@ -1,6 +1,6 @@
 package com.dsa.sl2_LinearSearch;
 
-public class Ls4_EvenDigits {
+public class Ls5_EvenDigits {
 
 	public static void main(String[] args) {
 		 int[] nums = {12,345,2,6,7896};
