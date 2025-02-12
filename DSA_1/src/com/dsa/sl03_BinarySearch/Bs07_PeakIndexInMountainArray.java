@@ -2,7 +2,7 @@ package com.dsa.sl03_BinarySearch;
 
 //https://leetcode.com/problems/peak-index-in-a-mountain-array/
 //https://leetcode.com/problems/find-peak-element/submissions/1540089679/
-public class Bs06_InfiniteArraySearch {
+public class Bs07_PeakIndexInMountainArray {
 
 	public static void main(String[] args) {
 		int[] arr = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170, 172, 173, 179, 180, 201, 205, 209, 301, 305, 10001, 99, 88, 77, 55};

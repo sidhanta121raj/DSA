@@ -1,16 +1,17 @@
 package com.dsa.sl03_BinarySearch;
 
-public class Bs07_PeakSearchInMountainArray {
+
+public class Bs06_TargetSearchInInfiniteArray {
 
 	public static void main(String[] args) {
 		int[] arr = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170, 172, 173, 179, 180, 201, 205, 209, 301, 305, 10001, 555551};
-		int target = 301;
+		int target = 3;
 		System.out.println(findInInfiniteArray(arr, target));
 
 	}
 
 	static int findInInfiniteArray(int[] arr, int target) {
-		int start = 0;
+		int start = 2;
 		int end = 2;
 		
 		
