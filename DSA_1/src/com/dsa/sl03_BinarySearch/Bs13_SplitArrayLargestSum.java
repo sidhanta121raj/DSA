@@ -6,8 +6,8 @@ public class Bs13_SplitArrayLargestSum {
 	public static void main(String[] args) {
 		int[] arr = {7,2,5,10,8};
 		int k=2;
-		System.out.println(splitArrayLS(arr, k));
-		//System.out.println(splitArrayBS(arr, k));
+		//System.out.println(splitArrayLS(arr, k));
+		System.out.println(splitArrayBS(arr, k));
 	}
 	
 	static int splitArrayLS(int[] arr, int k) {
