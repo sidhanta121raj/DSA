@@ -11,15 +11,18 @@ public class Bs15_ElementsSorted2DArraySearch {
                 {7, 8, 9}
         };
         System.out.println(Arrays.toString(search(arr, 9)));
+        System.out.println(Arrays.toString(flattenedSearch(arr, 9)));
 	}
 
     static int[] search(int[][] matrix, int target) {
-        int totalRows = matrix.length;
-        int totalCols = matrix[0].length; // be cautious, matrix may be empty
-        
-        if (totalCols == 0){
+    	
+    	if (matrix.length == 0){
             return new int[] {-1,-1};
         }
+    	
+        int totalRows = matrix.length;
+        int totalCols = matrix[0].length;
+        
         if (totalRows == 1) {
             return binarySearch(matrix, 0, 0, totalCols-1, target);
         }
@@ -80,6 +83,25 @@ public class Bs15_ElementsSorted2DArraySearch {
             }
         }
         return new int[]{-1, -1};
+    }
+    
+    static int[] flattenedSearch(int[][] matrix, int target) {
+        int rows = matrix.length, cols = matrix[0].length;
+        int left = 0, right = rows * cols - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            int midElement = matrix[mid / cols][mid % cols];
+
+            if (midElement == target) {
+                return new int[]{mid / cols, mid % cols}; // Found
+            } else if (midElement > target) {
+                right = mid - 1; // Move left
+            } else {
+                left = mid + 1; // Move right
+            }
+        }
+        return new int[]{-1, -1}; // Not found
     }
 
 }
