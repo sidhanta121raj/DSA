@@ -1,19 +1,15 @@
 package com.dsa.sl04_Sorting;
 
-import java.util.ArrayList;
-import java.util.List;
-
-//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
-public class So06_AllMissingNumbers {
+//https://leetcode.com/problems/find-the-duplicate-number/description/
+public class So07_DuplicateFinding {
 
 	public static void main(String[] args) {
-		int arr[] = {4,3,2,7,8,2,3,1};
-		System.out.println(findAllMissingNumber(arr));
+		int arr[] = {1,3,4,2,2};
+		System.out.println(findDuplicate(arr));
 
 	}
 	
-	static List<Integer> findAllMissingNumber(int[] arr) {
-		List<Integer> allMissingNos = new ArrayList<>();
+	static int findDuplicate(int[] arr) {
 		int i = 0;
 		while(i<arr.length) {
 			if(arr[i] != arr [arr[i]-1]) {
@@ -24,10 +20,10 @@ public class So06_AllMissingNumbers {
 		}
 		for(int j=0; j<arr.length; j++) {
 			if(arr[j] != j+1) {
-				allMissingNos.add(j+1);
+				return arr[j];
 			}
 		}
-		return allMissingNos;
+		return arr[arr.length-1];
 	}
 	
 	static void swap(int[] arr, int index1, int index2) {
