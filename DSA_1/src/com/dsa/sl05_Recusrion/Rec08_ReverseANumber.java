@@ -3,27 +3,29 @@ package com.dsa.sl05_Recusrion;
 public class Rec08_ReverseANumber {
 
 	public static void main(String[] args) {
-		reverse1(3720);
-		System.out.println(sum);
-		System.out.println(reverse2(3720));
+		reverseThroughExtraVariable(372);
+		System.out.println(reversedNo);
+		System.out.println(reverseWithoutExtraVariable(372));
 	}
 	
-	static int sum = 0;
-	private static void reverse1(int n) {
+	static int reversedNo = 0;
+	private static void reverseThroughExtraVariable(int n) {
 		if(n==0) {
 			return;
 		}
-		int rem = n%10;
-		sum = (sum * 10) + rem;
-		reverse1(n/10);
+		int reminder = n%10;
+		reversedNo = (reversedNo * 10) + reminder;
+		reverseThroughExtraVariable(n/10);
 	}
 	
-	private static int reverse2(int n) {
+	private static int reverseWithoutExtraVariable(int n) {
 		if(n%10==n) {
 			return n;
 		}
-		int digits = (int) (Math.log10(n)+1);
-		return (n%10 * (int) (Math.pow(10, digits-1)) + reverse2(n/10));
+		int noOfDigitsInN = (int) (Math.log10(n)+1);
+		int reminder = n%10;
+		
+		return (reminder * (int) (Math.pow(10, noOfDigitsInN-1)) + reverseWithoutExtraVariable(n/10));
 	}
 
 }

@@ -7,20 +7,20 @@ public class Rec11_NoOfSteps {
 		System.out.println(calculateSteps(10));
 
 	}
-	static int calculateSteps(int n) {
-		return noOfSteps(n, 0);
+	static int calculateSteps(int num) {
+		return noOfSteps(num, 0);
 	}
-	static int noOfSteps(int n, int steps) {
-		if(n == 0) {
+	static int noOfSteps(int num, int steps) {
+		if(num == 0) {
 			return steps;
 		}
-		if(n%2 ==0) {
-			n = n/2;
-		}else if(n%2 !=0) {
-			n = n-1;
+		if(num%2 ==0) {
+			num = num/2;
+		}else if(num%2 !=0) {
+			num = num-1;
 		}
 		steps++;
-		return noOfSteps(n, steps);
+		return noOfSteps(num, steps);
 	}
 
 }
