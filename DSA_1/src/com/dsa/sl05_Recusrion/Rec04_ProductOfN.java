@@ -1,6 +1,6 @@
 package com.dsa.sl05_Recusrion;
 
-public class Rec4_ProductOfN {
+public class Rec04_ProductOfN {
 	public static void main(String[] args) {
 		System.out.println(productOfNtoOne(-1));
 	}

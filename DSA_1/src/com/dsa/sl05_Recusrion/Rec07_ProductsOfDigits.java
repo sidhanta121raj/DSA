@@ -1,7 +1,7 @@
 package com.dsa.sl05_Recusrion;
 
 
-public class Rec7_ProductsOfDigits {
+public class Rec07_ProductsOfDigits {
 
 	public static void main(String[] args) {
 		System.out.println(productsOfDigits(273));

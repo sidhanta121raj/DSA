@@ -1,6 +1,6 @@
 package com.dsa.sl05_Recusrion;
 
-public class Rec9_CheckPallindrome {
+public class Rec09_CheckPallindrome {
 
 	public static void main(String[] args) {
 		System.out.println(isPallindrome(121));

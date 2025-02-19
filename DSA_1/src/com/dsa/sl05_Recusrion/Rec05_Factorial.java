@@ -1,6 +1,6 @@
 package com.dsa.sl05_Recusrion;
 
-public class Rec5_Factorial {
+public class Rec05_Factorial {
 	public static void main(String[] args) {
 		System.out.println(fact(5));
 	}

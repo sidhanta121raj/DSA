@@ -1,6 +1,6 @@
 package com.dsa.sl05_Recusrion;
 
-public class Rec6_SumOfDigits {
+public class Rec06_SumOfDigits {
 	public static void main(String[] args) {
 		System.out.println(sum(324));
 	}

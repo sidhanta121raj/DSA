@@ -1,6 +1,6 @@
 package com.dsa.sl05_Recusrion;
 
-public class Rec8_ReverseANumber {
+public class Rec08_ReverseANumber {
 
 	public static void main(String[] args) {
 		reverse1(3720);
