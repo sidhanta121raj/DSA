@@ -5,7 +5,7 @@ public class Bs08_TargetSearchInMountainArray {
 
 	public static void main(String[] args) {
 		//int[] arr = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170, 172, 173, 179, 180, 201, 205, 209, 301, 305, 10001, 99, 88, 77, 55};
-		int[] arr = {0,1,2,4,2,1};
+		int[] arr = {0, 1, 2, 4, 2, 1};
 		int target = 3;
 		MountainArray mArr = new MountainArray(arr);
 		System.out.println(findInMountainArray(target, mArr));
