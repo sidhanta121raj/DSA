@@ -1,4 +1,4 @@
-package com.dsa.subset;
+package com.dsa.sl06_subset;
 
 import java.util.ArrayList;
 import java.util.Arrays;
