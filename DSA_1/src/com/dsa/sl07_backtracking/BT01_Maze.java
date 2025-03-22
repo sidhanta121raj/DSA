@@ -64,6 +64,7 @@ public class BT01_Maze {
 		}
 	}
 	
+	// When only Left Right allowed with one restriction or hurdle
 	static void printPathsWithRestriction(boolean[][] maze, int r, int c, String path) {
 		if (r == maze.length-1 && c == maze[0].length-1) {
 			System.out.println(path);
@@ -81,5 +82,23 @@ public class BT01_Maze {
 			printPathsWithRestriction(maze, r, c + 1, path + "V");
 		}
 	}
+	
+	// When all directional path allowed
+		static void printAllDirectionalPaths(int r, int c, String path) {
+			if (r == 1 && c == 1) {
+				System.out.println(path);
+				return;
+			}
+
+			if (r < 3) {
+				printAllDirectionalPaths(r - 1, c, path + "R");
+			}
+			if (r > 1) {
+				printAllDirectionalPaths(r - 1, c, path + "R");
+			}
+			if (c > 1) {
+				printAllDirectionalPaths(r, c - 1, path + "D");
+			}
+		}
 
 }
