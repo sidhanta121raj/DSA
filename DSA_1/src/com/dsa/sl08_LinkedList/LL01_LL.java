@@ -1,12 +1,12 @@
 package com.dsa.sl08_LinkedList;
 
-public class LL {
+public class LL01_LL {
 	private Node head;
 	private Node tail;
 	private int size;
 	
 	
-	public LL() {
+	public LL01_LL() {
 		this.size = 0;
 	}
 	
@@ -51,6 +51,21 @@ public class LL {
 		Node node = new Node(value, temp.next);
 		temp.next = node;
 		size = size + 1;
+	}
+	
+	public void insertRec(int value, int index) {
+		head = insertRec(value, index, head);
+	}
+	
+	private Node insertRec(int value, int index, Node node) {
+		if(index == 0) {
+			Node temp = new Node(value, node);
+            size++;
+            return temp;
+		}
+		
+		node.next = insertRec(value, index-1, node.next);
+		return node;
 	}
 	
 	public void deleteFirst() {
@@ -110,6 +125,45 @@ public class LL {
 		}
 		System.out.println("END");
 	}
+	public void removeDuplicatesInSortedList() {
+		Node node = head;
+		while(node.next != null) {
+			if(node.value == node.next.value) {
+				node.next = node.next.next;
+				size--;
+			}else {
+				node = node.next;
+			}
+		}
+		tail = node;
+		tail.next = null;
+	}
+	
+	public static LL01_LL mergeSortedLists(LL01_LL first, LL01_LL second) {
+		Node node1 = first.head;
+		Node node2 = second.head;
+		LL01_LL res = new LL01_LL();
+		while(node1 != null && node2 != null) {
+			if(node1.value <= node2.value) {
+				res.insertLast(node1.value);
+				node1 = node1.next;
+			}else {
+				res.insertLast(node2.value);
+				node2 = node2.next;
+			}
+		}
+		
+		while(node1 != null) {
+			res.insertLast(node1.value);
+			node1 = node1.next;
+		}
+		
+		while(node2 != null) {
+			res.insertLast(node2.value);
+			node2 = node2.next;
+		}
+		return res;
+	}
 	
 	private class Node{
 		private int value;
@@ -124,9 +178,11 @@ public class LL {
 			this.next = next;
 		}
 	}
+	
+	
 
 	public static void main(String[] args) {
-		LL list = new LL();
+		LL01_LL list = new LL01_LL();
         list.insertFirst(3);
         list.insertFirst(2);
         list.insertFirst(8);
@@ -140,6 +196,34 @@ public class LL {
         list.display();
         list.delete(2);
         list.display();
+        list.insertRec(88, 2);
+        list.display();
+        
+        LL01_LL list1 = new LL01_LL();
+        list1.insertLast(1);
+        list1.insertLast(1);
+        list1.insertLast(2);
+        list1.insertLast(3);
+        list1.insertLast(3);
+        list1.insertLast(3);
+        list1.display();
+        list1.removeDuplicatesInSortedList();
+        list1.display();
+        
+        LL01_LL first = new LL01_LL();
+        LL01_LL second = new LL01_LL();
+
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        LL01_LL ans = LL01_LL.mergeSortedLists(first, second);
+        ans.display();
        
 	}
 

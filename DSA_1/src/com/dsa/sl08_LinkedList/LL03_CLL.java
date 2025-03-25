@@ -1,10 +1,10 @@
 package com.dsa.sl08_LinkedList;
 
-public class CLL {
+public class LL03_CLL {
 	private Node head;
 	private Node tail;
 
-	public CLL() {
+	public LL03_CLL() {
 		this.head = null;
 		this.tail = null;
 	}
@@ -74,7 +74,7 @@ public class CLL {
 	}
 
 	public static void main(String[] args) {
-		CLL list = new CLL();
+		LL03_CLL list = new LL03_CLL();
 		list.insert(23);
 		list.insert(3);
 		list.insert(19);

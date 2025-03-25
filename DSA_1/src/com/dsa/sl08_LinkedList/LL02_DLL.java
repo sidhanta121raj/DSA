@@ -1,6 +1,6 @@
 package com.dsa.sl08_LinkedList;
 
-public class DLL {
+public class LL02_DLL {
 	private Node head;
 
 	public void insertFirst(int value) {
@@ -95,7 +95,7 @@ public class DLL {
 	}
 
 	public static void main(String[] args) {
-      DLL list = new DLL();
+      LL02_DLL list = new LL02_DLL();
       list.insertFirst(3);
       list.insertFirst(2);
       list.insertFirst(8);
